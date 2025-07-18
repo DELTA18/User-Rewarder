@@ -6,7 +6,7 @@ import DarkVeil from './DarkVeil';
 
 // import { ProgressiveBlur } from "./magicui/progressive-blur";
 
-const socket = io('http://localhost:5000');
+const socket = io(process.env.BACKEND_URI);
 
 const Leaderboard = () => {
   const [users, setUsers] = useState([]);
