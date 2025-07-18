@@ -1,5 +1,5 @@
 import axios from 'axios';
-URI = process.env.BACKEND_URI || 'http://localhost:5000';
+const URI = process.env.BACKEND_URI || 'http://localhost:5000';
 const API = axios.create({ baseURL: `${URI}/api` });
 
 export const getUsers = () => API.get('/users');
