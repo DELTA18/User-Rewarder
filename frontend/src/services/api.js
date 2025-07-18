@@ -1,6 +1,6 @@
 import axios from 'axios';
-
-const API = axios.create({ baseURL: 'http://localhost:5000/api' });
+URI = process.env.BACKEND_URI || 'http://localhost:5000';
+const API = axios.create({ baseURL: `${URI}/api` });
 
 export const getUsers = () => API.get('/users');
 export const addUser = (name) => API.post('/users', { name });
