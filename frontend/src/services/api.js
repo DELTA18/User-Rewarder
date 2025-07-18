@@ -1,5 +1,5 @@
 import axios from 'axios';
-const URI =   import.meta.env.BACKEND_URI || 'http://localhost:5000';
+const URI =   import.meta.env.VITE_BACKEND_URI || 'http://localhost:5000';
 const API = axios.create({ baseURL: `${URI}/api` });
 
 export const getUsers = () => API.get('/users');
